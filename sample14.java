@@ -1,13 +1,14 @@
 import java.util.*;
-class sample10{
+class sample14{
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		int n=sc.nextInt(),sum=0;
-		while(n>0){
-			int i=n%10;
-			n=n/10;
-			sum+=i;
+		int[] arr=new int[n];
+		for(int i=0;i<n;i++){
+			arr[i]=sc.nextInt();
+			sum+=arr[i];
 		}
 		System.out.println(sum);
+		System.out.println(sum/n);
 	}
 }

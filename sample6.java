@@ -1,20 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package bad022;
-
-import java.util.Scanner;
-
-/**
- *
- * @author admin
- */
-public class sample6 {
-    public static void main(String[] args) {
-    Scanner sc=new Scanner(System.in);
-    String str=sc.next(),res=str.substring(1, (str.length()-1));
-    System.out.println((str.charAt(0)=='x' && str.charAt(str.length()-1)=='x') ?  res : str);
-    }
+import java.util.*;
+class sample6{
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		char gen=sc.next().charAt(0);
+		int ag=sc.nextInt();
+		if(gen=='f'){
+			if(ag>=1 && ag<=58){		
+				System.out.println("8.2 % interest");
+			}
+			else if (ag>=59 && ag<=100){
+				System.out.println("9.2 % interest");
+			}
+		}
+		else if(gen=='m'){
+			if(ag>=1 && ag<=58){
+				System.out.println("8.4 % interest");
+			}
+			else if(ag>=59 && ag<=100){
+				System.out.println("10.5 % interest");
+			}
+		}
+		else{
+			System.out.println("Gender not valid");
+		}
+	}
 }
